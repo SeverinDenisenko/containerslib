@@ -1,0 +1,3 @@
+[submodule "submodules/unittestlib"]
+	path = submodules/unittestlib
+	url = https://github.com/SeverinDenisenko/unittestlib
