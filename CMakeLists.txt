@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.21)
 
 project(containers)
 
@@ -17,7 +17,7 @@ target_include_directories(containers
         ${PROJECT_INCLUDE_DIR}
 )
 
-if (ENABLE_TESTING)
+if (ENABLE_TESTING AND PROJECT_IS_TOP_LEVEL)
     enable_testing()
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/submodules/unittestlib)
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/tests)
