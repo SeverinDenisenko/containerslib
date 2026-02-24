@@ -11,8 +11,13 @@ private:
     using base = std::variant<T, std::exception_ptr>;
 
 public:
-    result(const T& value)
+    explicit result(const T& value)
         : base(value)
+    {
+    }
+
+    explicit result(const std::exception_ptr& exception)
+        : base(exception)
     {
     }
 

@@ -5,7 +5,7 @@ using namespace con;
 
 SIMPLE_TEST(result_test_1)
 {
-    result<int> r = 42;
+    result<int> r { 42 };
     ASSERT_TRUE(r.has_value());
     ASSERT_EQ(r.value(), 42);
 }
