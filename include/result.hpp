@@ -5,6 +5,8 @@
 
 namespace con {
 
+using unit = std::monostate;
+
 template <typename T>
 struct result : private std::variant<T, std::exception_ptr> {
 private:
